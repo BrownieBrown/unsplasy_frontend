@@ -21,3 +21,7 @@ export const useFetch = ((url) => {
 export const deleteFile = (url, id) => {
     fetch(`${url}/delete/${id}`, {method: "DELETE"}).then(console.log)
 }
+
+export const likeImage = (id) => {
+    fetch(`https://unsplasy-backend.herokuapp.com/file/like/${id}`, {method: "PUT"}).then(console.log)
+}
